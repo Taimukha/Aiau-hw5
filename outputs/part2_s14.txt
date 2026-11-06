@@ -1,0 +1,25 @@
+=== S14: Direct Tool Test ===
+
+USER: Is the password recovery service working? Please check its current status.
+
+TOOL: check_service_status
+RESULT:
+{
+  "found": true,
+  "service": "account_recovery",
+  "profile": "recovery_outage",
+  "status": "outage",
+  "message": "The demo account-recovery service is unavailable. The fixture gives no repair time."
+}
+
+ASSISTANT:
+The demo account-recovery service is unavailable. The fixture gives no repair time.
+
+=== SCENARIO SUMMARY ===
+SERVICE: account_recovery
+PROFILE: recovery_outage
+STATUS: outage
+TICKET CREATED: No
+INVENTED REPAIR TIME: No
+
+S14 DIRECT TOOL TEST: PASS

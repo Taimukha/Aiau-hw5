@@ -1,0 +1,35 @@
+=== S14: AI Agent Test ===
+
+USER: Check the password recovery service status. Tell me if it is working or unavailable. Do not create a ticket.
+
+=== TOOLS CALLED BY AI ===
+[
+  {
+    "name": "status_tool",
+    "args": {
+      "service": "password"
+    }
+  }
+]
+
+=== VERIFIED STATUS ===
+{
+  "account_recovery": "outage"
+}
+
+=== AI FINAL ANSWER ===
+The password recovery service is currently unavailable due to an outage. There is no estimated time for repair at the moment. Let me know if you need further assistance!
+
+=== VALIDATION ===
+Status tool called: PASS
+Correct service checked: PASS
+No ticket tool called: PASS
+Outage explained: PASS
+No invented repair time: PASS
+
+=== SCENARIO SUMMARY ===
+TOOLS USED: ['status_tool']
+VERIFIED STATUS: {'account_recovery': 'outage'}
+TOOL ROUNDS: 1
+
+S14 AI AGENT TEST: PASS
