@@ -1,0 +1,4 @@
+=== S13: User isolation ===
+USER A language: Kazakh
+USER B language: None
+PASS: User B cannot access User A preference.

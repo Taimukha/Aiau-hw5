@@ -1,0 +1,7 @@
+=== S12: Preference across threads ===
+
+USER: Please respond in Kazakh.
+AI: Қандай мәселе бар? Көмек көрсетуге дайынмын.
+
+USER: Which language did I request?
+AI: Сіз қазақ тілін таңдадыңыз. Мен қазақша жауап беремін.

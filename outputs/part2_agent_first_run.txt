@@ -1,0 +1,16 @@
+MODEL: deepseek/deepseek-chat
+PROFILE: normal
+TOOL: instructions_tool
+ARGS: {"topic": "wifi"}
+RESULT: {"found": true, "topic": "wifi", "instruction_id": "GUIDE-WIFI", "title": "Connect to the practice campus network", "steps": ["Check that Wi-Fi is enabled and airplane mode is off.", "Select the fictional Campus-Demo network.", "If connection fails, forget the saved network and try connecting again.", "If the problem remains, check the service status before preparing a ticket."]}
+
+FINAL ANSWER:
+Here are the Wi-Fi troubleshooting steps:
+
+1. **Check that Wi-Fi is enabled and airplane mode is off.**  
+2. **Select the fictional Campus-Demo network.**  
+3. **If connection fails, forget the saved network and try connecting again.**  
+4. **If the problem remains, check the service status before preparing a ticket.**  
+
+Let me know if you need further assistance!
+TOOL ROUNDS: 1

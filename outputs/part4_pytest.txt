@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0 -- /Users/aiaulymtaimukha/Desktop/Aiau-hw5/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/aiaulymtaimukha/Desktop/Aiau-hw5
+plugins: anyio-4.12.1, langsmith-0.4.37
+collecting ... collected 9 items
+
+tests/test_helpdesk_tools.py::test_wifi_instructions PASSED              [ 11%]
+tests/test_helpdesk_tools.py::test_password_instructions PASSED          [ 22%]
+tests/test_helpdesk_tools.py::test_unknown_instructions PASSED           [ 33%]
+tests/test_helpdesk_tools.py::test_normal_wifi_status PASSED             [ 44%]
+tests/test_helpdesk_tools.py::test_wifi_outage PASSED                    [ 55%]
+tests/test_helpdesk_tools.py::test_unknown_status PASSED                 [ 66%]
+tests/test_helpdesk_tools.py::test_recovery_outage PASSED                [ 77%]
+tests/test_helpdesk_tools.py::test_ticket_draft PASSED                   [ 88%]
+tests/test_helpdesk_tools.py::test_missing_ticket_fields PASSED          [100%]
+
+============================== 9 passed in 0.01s ===============================

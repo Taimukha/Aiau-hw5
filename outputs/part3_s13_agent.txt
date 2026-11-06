@@ -1,0 +1,7 @@
+=== S13: User isolation ===
+
+USER: Please respond in Kazakh. My Wi-Fi is not working.
+AI: Wi-Fi қосылмай ма? Алдымен құрылғыңызды қайта іске қосып көріңіз. Егер ол жұмыс істемесе, Wi-Fi байланысын қайта қосыңыз. Осыдан кейін де мәселе шешілмесе, университеттік IT қызметке хабарласыңыз.
+
+USER: Did I specify a language preference or report a problem earlier?
+AI: No, you haven't specified a language preference or reported a problem earlier in this conversation. Let me know how I can help!

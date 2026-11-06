@@ -1,0 +1,95 @@
+=== TOOL 1: FIND INSTRUCTIONS ===
+{
+  "found": true,
+  "topic": "wifi",
+  "instruction_id": "GUIDE-WIFI",
+  "title": "Connect to the practice campus network",
+  "steps": [
+    "Check that Wi-Fi is enabled and airplane mode is off.",
+    "Select the fictional Campus-Demo network.",
+    "If connection fails, forget the saved network and try connecting again.",
+    "If the problem remains, check the service status before preparing a ticket."
+  ]
+}
+{
+  "found": true,
+  "topic": "password",
+  "instruction_id": "GUIDE-PASSWORD",
+  "title": "Recover access to the practice account",
+  "steps": [
+    "Open the practice sign-in screen and choose Forgot password.",
+    "Follow the recovery instructions shown by the practice application.",
+    "If recovery is unavailable, prepare a ticket describing the error.",
+    "Never include a password or recovery code in a ticket."
+  ]
+}
+{
+  "found": false,
+  "topic": "screen",
+  "message": "No instructions found for this topic."
+}
+
+=== TOOL 2: CHECK SERVICE STATUS ===
+{
+  "found": true,
+  "service": "wifi",
+  "profile": "normal",
+  "status": "operational",
+  "message": "The demo Wi-Fi service has no reported outage."
+}
+{
+  "found": true,
+  "service": "wifi",
+  "profile": "wifi_outage",
+  "status": "outage",
+  "message": "The demo Wi-Fi service is unavailable across campus. The fixture gives no repair time."
+}
+{
+  "found": true,
+  "service": "wifi",
+  "profile": "status_unavailable",
+  "status": "unknown",
+  "message": "The demo Wi-Fi status source is unavailable."
+}
+{
+  "found": true,
+  "service": "account_recovery",
+  "profile": "recovery_outage",
+  "status": "outage",
+  "message": "The demo account-recovery service is unavailable. The fixture gives no repair time."
+}
+
+=== TOOL 3: PREPARE TICKET ===
+{
+  "created": true,
+  "submitted": false,
+  "ticket": {
+    "ticket_id": "DRAFT-96D764ED",
+    "status": "draft",
+    "user_id": "demo-user-a",
+    "thread_id": "s06",
+    "category": "wifi",
+    "summary": "Campus-Demo Wi-Fi does not connect.",
+    "steps_tried": [
+      "Enabled Wi-Fi",
+      "Forgot the saved network",
+      "Tried reconnecting"
+    ],
+    "service_status": "operational",
+    "status_profile": "normal",
+    "reference_ids": [
+      "GUIDE-WIFI"
+    ]
+  }
+}
+
+=== TOOL 3: MISSING DETAILS TEST ===
+{
+  "created": false,
+  "submitted": false,
+  "missing_fields": [
+    "category",
+    "summary"
+  ],
+  "message": "Please provide the missing ticket details."
+}

@@ -1,0 +1,43 @@
+SCENARIO: S07
+MODEL: deepseek/deepseek-chat
+PROFILE: wifi_outage
+
+=== MESSAGE 1 ===
+USER: Show me the Wi-Fi troubleshooting steps.
+
+TOOL: instructions_tool
+ARGS: {"topic": "Wi-Fi"}
+RESULT: {"found": true, "topic": "wifi", "instruction_id": "GUIDE-WIFI", "title": "Connect to the practice campus network", "steps": ["Check that Wi-Fi is enabled and airplane mode is off.", "Select the fictional Campus-Demo network.", "If connection fails, forget the saved network and try connecting again.", "If the problem remains, check the service status before preparing a ticket."]}
+
+FINAL ANSWER:
+Here are the Wi-Fi troubleshooting steps:
+
+1. Check that Wi-Fi is enabled and airplane mode is off.  
+2. Select the fictional **Campus-Demo** network.  
+3. If the connection fails, forget the saved network and try connecting again.  
+4. If the problem persists, check the service status before preparing a ticket.  
+
+Let me know if you need further assistance!
+TOOL ROUNDS: 1
+VERIFIED STATUS: {}
+
+=== MESSAGE 2 ===
+USER: I enabled Wi-Fi and forgot the saved network, but Campus-Demo still will not connect. Check whether Wi-Fi is down. If it is operating, prepare a ticket about this problem.
+
+TOOL: status_tool
+ARGS: {"service": "Wi-Fi"}
+RESULT: {"found": true, "service": "wifi", "profile": "wifi_outage", "status": "outage", "message": "The demo Wi-Fi service is unavailable across campus. The fixture gives no repair time."}
+
+FINAL ANSWER:
+The Wi-Fi service is currently experiencing an outage across campus, and there is no estimated repair time available. Unfortunately, I cannot prepare a ticket while the service is down. Please check back later for updates on the service status. Let me know if you need further assistance!
+TOOL ROUNDS: 1
+VERIFIED STATUS: {'wifi': 'outage'}
+
+=== SCENARIO SUMMARY ===
+TOOLS USED: ['instructions_tool', 'status_tool']
+EXPECTED: status outage, no conditional ticket draft.
+
+/Users/aiaulymtaimukha/Desktop/Aiau-hw5/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/aiaulymtaimukha/Desktop/Aiau-hw5/.venv/lib/python3.9/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer

@@ -1,0 +1,168 @@
+
+==================================================
+TEST 1: I cannot connect to Wi-Fi.
+==================================================
+
+INITIAL STATE:
+{
+  "message": "I cannot connect to Wi-Fi.",
+  "category": "",
+  "reply": ""
+}
+
+NODE: read_request
+UPDATE:
+{
+  "category": "wifi"
+}
+STATE AFTER NODE:
+{
+  "message": "I cannot connect to Wi-Fi.",
+  "category": "wifi",
+  "reply": ""
+}
+
+NODE: wifi_help
+UPDATE:
+{
+  "reply": "Connect to the practice campus network\n1. Check that Wi-Fi is enabled and airplane mode is off.\n2. Select the fictional Campus-Demo network.\n3. If connection fails, forget the saved network and try connecting again.\n4. If the problem remains, check the service status before preparing a ticket."
+}
+STATE AFTER NODE:
+{
+  "message": "I cannot connect to Wi-Fi.",
+  "category": "wifi",
+  "reply": "Connect to the practice campus network\n1. Check that Wi-Fi is enabled and airplane mode is off.\n2. Select the fictional Campus-Demo network.\n3. If connection fails, forget the saved network and try connecting again.\n4. If the problem remains, check the service status before preparing a ticket."
+}
+
+EXECUTION ORDER:
+START -> read_request -> wifi_help -> END
+
+Expected category: wifi
+Actual category: wifi
+RESULT: PASS
+
+==================================================
+TEST 2: I forgot my PASSWORD.
+==================================================
+
+INITIAL STATE:
+{
+  "message": "I forgot my PASSWORD.",
+  "category": "",
+  "reply": ""
+}
+
+NODE: read_request
+UPDATE:
+{
+  "category": "password"
+}
+STATE AFTER NODE:
+{
+  "message": "I forgot my PASSWORD.",
+  "category": "password",
+  "reply": ""
+}
+
+NODE: password_help
+UPDATE:
+{
+  "reply": "Recover access to the practice account\n1. Open the practice sign-in screen and choose Forgot password.\n2. Follow the recovery instructions shown by the practice application.\n3. If recovery is unavailable, prepare a ticket describing the error.\n4. Never include a password or recovery code in a ticket."
+}
+STATE AFTER NODE:
+{
+  "message": "I forgot my PASSWORD.",
+  "category": "password",
+  "reply": "Recover access to the practice account\n1. Open the practice sign-in screen and choose Forgot password.\n2. Follow the recovery instructions shown by the practice application.\n3. If recovery is unavailable, prepare a ticket describing the error.\n4. Never include a password or recovery code in a ticket."
+}
+
+EXECUTION ORDER:
+START -> read_request -> password_help -> END
+
+Expected category: password
+Actual category: password
+RESULT: PASS
+
+==================================================
+TEST 3: My laptop screen is broken.
+==================================================
+
+INITIAL STATE:
+{
+  "message": "My laptop screen is broken.",
+  "category": "",
+  "reply": ""
+}
+
+NODE: read_request
+UPDATE:
+{
+  "category": "other"
+}
+STATE AFTER NODE:
+{
+  "message": "My laptop screen is broken.",
+  "category": "other",
+  "reply": ""
+}
+
+NODE: other_help
+UPDATE:
+{
+  "reply": "Is your problem related to Wi-Fi or a password?"
+}
+STATE AFTER NODE:
+{
+  "message": "My laptop screen is broken.",
+  "category": "other",
+  "reply": "Is your problem related to Wi-Fi or a password?"
+}
+
+EXECUTION ORDER:
+START -> read_request -> other_help -> END
+
+Expected category: other
+Actual category: other
+RESULT: PASS
+
+==================================================
+TEST 4: My Wi-Fi password does not work.
+==================================================
+
+INITIAL STATE:
+{
+  "message": "My Wi-Fi password does not work.",
+  "category": "",
+  "reply": ""
+}
+
+NODE: read_request
+UPDATE:
+{
+  "category": "clarify"
+}
+STATE AFTER NODE:
+{
+  "message": "My Wi-Fi password does not work.",
+  "category": "clarify",
+  "reply": ""
+}
+
+NODE: clarify_problem
+UPDATE:
+{
+  "reply": "Are you having trouble connecting to Wi-Fi, or recovering your account password?"
+}
+STATE AFTER NODE:
+{
+  "message": "My Wi-Fi password does not work.",
+  "category": "clarify",
+  "reply": "Are you having trouble connecting to Wi-Fi, or recovering your account password?"
+}
+
+EXECUTION ORDER:
+START -> read_request -> clarify_problem -> END
+
+Expected category: clarify
+Actual category: clarify
+RESULT: PASS

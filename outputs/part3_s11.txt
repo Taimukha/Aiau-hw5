@@ -1,0 +1,4 @@
+=== S11: Load After Restart ===
+
+USER: What issue did I report earlier, and what steps did I try?
+AI: You reported that your Wi-Fi is not working. You enabled Wi-Fi and tried reconnecting.

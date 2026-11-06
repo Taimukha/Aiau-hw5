@@ -1,0 +1,4 @@
+=== S12: Load preference after restart ===
+USER A, NEW THREAD
+Saved language: Kazakh
+PASS: Preference survived process restart.
